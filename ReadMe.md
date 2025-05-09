@@ -77,12 +77,10 @@ Tento projekt je demonstrační backendová aplikace postavená na frameworku **
 - Server nespravuje žádné session, vše je řízeno pomocí JWT.
 
 ## Monitoring
--Integrovaný pomocí Spring Boot Actuator:
-
-/actuator/health — kontrola dostupnosti systému.
-/actuator/metrics — základní metriky aplikace (počty požadavků, paměť, vlákna apod.).
-
-Přístup k Actuator endpointům je zabezpečen — pouze přihlášený uživatel s rolí ADMIN má přístup.
+* Integrovaný pomocí Spring Boot Actuator:
+* /actuator/health — kontrola dostupnosti systému.
+* /actuator/metrics — základní metriky aplikace (počty požadavků, paměť, vlákna apod.).
+* Přístup k Actuator endpointům je zabezpečen — pouze přihlášený uživatel s rolí ADMIN má přístup.
 
 ## Databázové schéma
 
