@@ -87,7 +87,7 @@ Přístup k Actuator endpointům je zabezpečen — pouze přihlášený uživat
 ## Databázové schéma
 
 ### users
-```sql{
+```sql
 CREATE TABLE users (
 id BIGINT AUTO_INCREMENT PRIMARY KEY,
 username VARCHAR(255) NOT NULL UNIQUE,
@@ -95,7 +95,8 @@ password VARCHAR(255) NOT NULL,
 email VARCHAR(255),
 created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
 updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
-);}```
+);
+```
 
 
 ### roles
@@ -103,7 +104,8 @@ updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
 CREATE TABLE roles (
 id BIGINT AUTO_INCREMENT PRIMARY KEY,
 name VARCHAR(255) NOT NULL
-);```
+);
+```
 
 ### users_roles
 ```sql
@@ -113,7 +115,8 @@ role_id BIGINT NOT NULL,
 PRIMARY KEY (user_id, role_id),
 FOREIGN KEY (user_id) REFERENCES users(id),
 FOREIGN KEY (role_id) REFERENCES roles(id)
-);```
+);
+```
 
 ### users_roles
 ```sql
@@ -129,7 +132,8 @@ action_type VARCHAR(50) NOT NULL,
 ip_address VARCHAR(255) NOT NULL,
 log_level VARCHAR(255) NOT NULL,
 actor_user_id MEDIUMTEXT
-);```
+);
+```
 
 ## Spuštění projektu
 * Otevři projekt ve své IDE.
